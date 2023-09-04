@@ -1,0 +1,10 @@
+#written on iPhone, fix tabs
+#this program finds multiples of 3 and/or 5 below 1000
+
+multiples = []
+x = 1
+while x<=1000:
+      if x%3==0 or x%5==0:
+           multiples.append(x)
+      x+=1
+print(sum(multiples))
