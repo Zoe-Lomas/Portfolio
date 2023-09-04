@@ -1,0 +1,10 @@
+#written on iphone, fix tabs
+#find sum of even fibbonacci numbers < 4,000,000
+fib = [1,2]
+while fib[-1] <= 4000000:
+     a = fib[-1] + fib[-2]
+     fib.append(a)
+for i in fib:
+     if i%2!=0:
+          fib.remove(i)
+print(sum(fib))
