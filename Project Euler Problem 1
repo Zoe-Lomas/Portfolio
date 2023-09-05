@@ -1,10 +1,9 @@
-#written on iPhone, fix tabs
-#this program finds multiples of 3 and/or 5 below 1000
+#this program finds the sum of multiples of 3 and/or 5 below 1000
 
-multiples = []
-x = 1
-while x<=1000:
-      if x%3==0 or x%5==0:
-           multiples.append(x)
-      x+=1
-print(sum(multiples))
+multiples = [] #list of multiples
+x = 1 #counter
+while x<=1000: #makes sure counter is below 1000 so the program will end
+      if x%3==0 or x%5==0: #test for multiples of 3 and/or 5
+           multiples.append(x) #adds multiples to list
+      x+=1 #increases counter
+print(sum(multiples)) #adds the multiples and outputs the answer
