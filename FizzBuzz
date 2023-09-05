@@ -1,10 +1,10 @@
-for i in range(1,100):
+for i in range(1,100): #counts up from 1
   output=[]
-  if i%3==0:
-    output.append("Fizz")
-  if i%5==0:
-    output.append("Buzz")
-  if len(output):
-    print(output
-  else:
+  if i%3==0: #modular to identify multiples of 3
+    output.append("Fizz") #adds Fizz to output
+  if i%5==0: #modular to identify multiples of 5
+    output.append("Buzz") #adds Buzz to output
+  if len(output): #checks to see if there's any words to output
+    print(output) #if there is it outputs those words
+  else: #otherwise it outputs the number
     print(i)
