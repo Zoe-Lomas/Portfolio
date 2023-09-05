@@ -1,10 +1,9 @@
-#written on iphone, fix tabs
 #find sum of even fibbonacci numbers < 4,000,000
-fib = [1,2]
-while fib[-1] <= 4000000:
-     a = fib[-1] + fib[-2]
-     fib.append(a)
-for i in fib:
-     if i%2!=0:
-          fib.remove(i)
-print(sum(fib))
+fib = [1,2] #list of fibbonacci numbers
+while fib[-1] <= 4000000: #makes sure the last number in the sequence is <4,000,000
+     a = fib[-1] + fib[-2] #adds the last 2 numbers of the sequence
+     fib.append(a) #adds the sum to the end of the list
+for i in fib: #goes through the list of fibbonacci numbers
+     if i%2!=0: #checks if the number is odd
+          fib.remove(i) #removes odd numbers
+print(sum(fib)) #adds even fibbonacci numbers and shows results
