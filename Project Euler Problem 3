@@ -1,0 +1,37 @@
+#Project Euler Problem 3 - What is the largest prime factor of the number 600851475143?
+import math
+
+def primeCheck(x):
+    sta = 1
+    for i in range(2, int(x/2)+1):
+        if(x%i==0):
+            sta=0
+            print("Not Prime")
+            break
+        else:
+            continue
+    if(sta==1):
+        return True
+def findFactors(x):
+    factors = []
+    modular = 1
+    while modular <= x:
+        if x%modular==0:
+            factors.append(modular)
+        modular += 1
+    return factors
+num = int(input("Enter the number: "))
+primefactors = []
+ret = primeCheck(num)
+if ret==True:
+    print(num, "is prime")
+else:
+    fact = findFactors(num)
+    print(fact)
+    for i in fact:
+        factorCheck = primeCheck(i)
+        if factorCheck==True:
+            primefactors.append(i)
+    print(fact)
+#6857
+    print(primefactors)
