@@ -1,0 +1,21 @@
+#What is the 10,001st prime number?
+def primeCheck(x):
+    sta = 1
+    for i in range(2, int(x/2)+1):
+        if(x%i==0):
+            sta=0
+            break
+        else:
+            continue
+    if(sta==1):
+        return True
+primes = []
+number = 1
+newestprime = 0
+primecount = 0
+while primecount<10002:
+    if primeCheck(number)==True:
+        newestprime = number
+        primecount+=1
+    number+=1
+print(newestprime)
