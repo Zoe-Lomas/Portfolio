@@ -1,0 +1,13 @@
+#Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+sumofsquares = 0
+squareofsum = 0
+a = 100 #counter
+while a>0:
+    squareofsum+=a #adding numbers 1-100 together
+    sumofsquares+=(a*a) #adding squares of 1-100 together
+    a-=1 #counting down from 100
+squareofsum = squareofsum*squareofsum #squaring the sum
+if sumofsquares>squareofsum: #determining which total is bigger
+    print(sumofsquares-squareofsum)
+else:
+    print(squareofsum-sumofsquares)
