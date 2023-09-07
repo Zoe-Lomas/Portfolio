@@ -1,0 +1,10 @@
+#Project Euler Problem 4 - Largest palindrome made from the product of two 3 digit numbers.
+n = 0 #output
+for a in range(999, 100, -1): #every 3 digit number
+  for b in range(a, 100, -1): #every 3 digit number
+        x = a * b #multiply each pair of 3 digit numbers
+        if x > n: #if the product is greater than previous products
+            s = str(a * b) #convert to string
+            if s == s[::-1]: #check it's a palindrome
+                n = a * b #replace previous palindrome
+print(n) 
